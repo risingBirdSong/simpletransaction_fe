@@ -1,0 +1,155 @@
+var helpers = require("../../../../../../usr/local/lib/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _react = require("react");
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _reactDom = require('react-dom');
+  var _reactDomDefault = _parcelHelpers.interopDefault(_reactDom);
+  var _reactRouterDom = require("react-router-dom");
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _jsxFileName = "/home/peterm/codingHome/haskell/simplebank/fe/index.tsx", _s = $RefreshSig$();
+  function Welcome(props) {
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("h1", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 9,
+          columnNumber: 12
+        }
+      }, "Hello, ", props.name)
+    );
+  }
+  _c = Welcome;
+  function Home() {
+    _s();
+    const [loggedInName, setLoggedInName] = _react.useState("");
+    _react.useEffect(() => {
+      fetch("https://api.example.com/items").then(res => res.json()).then(result => {
+        console.log(result);
+      }, // Note: it's important to handle errors here
+      // instead of a catch() block so that we don't swallow
+      // exceptions from actual bugs in components.
+      error => {
+        console.log(error);
+      });
+    }, []);
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("div", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 36,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("h1", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 37,
+          columnNumber: 13
+        }
+      }, "im home :)"), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 38,
+          columnNumber: 13
+        }
+      }))
+    );
+  }
+  _s(Home, "VOEQUIbWpeAe4AfTBBb5S5yTS20=");
+  _c2 = Home;
+  function NewsFeed() {
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("div", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 47,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("h1", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 48,
+          columnNumber: 13
+        }
+      }, "im newsfeed"))
+    );
+  }
+  _c3 = NewsFeed;
+  function App() {
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.BrowserRouter, {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 55,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 56,
+          columnNumber: 13
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
+        exact: true,
+        path: "/",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 57,
+          columnNumber: 17
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement(Home, {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 58,
+          columnNumber: 21
+        }
+      })), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
+        path: "/news",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 60,
+          columnNumber: 17
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement(NewsFeed, {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 61,
+          columnNumber: 21
+        }
+      }))))
+    );
+  }
+  _c4 = App;
+  _reactDomDefault.default.render(/*#__PURE__*/_reactDefault.default.createElement(App, {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 69,
+      columnNumber: 5
+    }
+  }), document.getElementById('root'));
+  var _c, _c2, _c3, _c4;
+  $RefreshReg$(_c, "Welcome");
+  $RefreshReg$(_c2, "Home");
+  $RefreshReg$(_c3, "NewsFeed");
+  $RefreshReg$(_c4, "App");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

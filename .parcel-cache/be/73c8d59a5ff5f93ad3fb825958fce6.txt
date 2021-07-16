@@ -1,0 +1,5 @@
+4
+58/home/peterm/codingHome/haskell/simplebank/fe/package.json1626407704461721404 0
+55/home/peterm/codingHome/haskell/simplebank/fe/index.tsx1626407796105878740 0
+56/home/peterm/codingHome/haskell/simplebank/fe/index.html1626407767477829809 0
+45/home/peterm/codingHome/haskell/simplebank/fe1626407823969926192 1
