@@ -1057,7 +1057,7 @@ try {
   var _reactHookForm = require("react-hook-form");
   var _axios = require("axios");
   var _axiosDefault = _parcelHelpers.interopDefault(_axios);
-  var _jsxFileName = "/home/peterm/codingHome/haskell/simplebank/fe/index.tsx", _s = $RefreshSig$(), _s2 = $RefreshSig$(), _s3 = $RefreshSig$(), _s4 = $RefreshSig$(), _s5 = $RefreshSig$();
+  var _jsxFileName = "/home/peterm/codingHome/haskell/simplebank/fe/index.tsx", _s = $RefreshSig$(), _s2 = $RefreshSig$(), _s3 = $RefreshSig$(), _s4 = $RefreshSig$(), _s5 = $RefreshSig$(), _s6 = $RefreshSig$();
   function _extends() {
     _extends = Object.assign || (function (target) {
       for (var i = 1; i < arguments.length; i++) {
@@ -1085,16 +1085,9 @@ try {
     );
   }
   _c = Welcome;
-  // function Home() {
-  // const [loggedInName, setLoggedInName] = useState("");
-  // return (
-  // <div>
-  // <h1>im home :)</h1>
-  // </div>
-  // )
-  // }
   const Logout = props => {
     _s();
+    const [loggingOut, setLoggingOut] = _react.useState(false);
     _react.useEffect(() => {
       _axiosDefault.default.post("http://localhost:3000/logout", {
         "name": props.currentUser
@@ -1109,7 +1102,7 @@ try {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 37,
+          lineNumber: 26,
           columnNumber: 9
         }
       }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Redirect, {
@@ -1117,13 +1110,13 @@ try {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38,
+          lineNumber: 28,
           columnNumber: 13
         }
       }))
     );
   };
-  _s(Logout, "OD7bBpZva5O2jO+Puf00hKivP7c=");
+  _s(Logout, "YO1yuAiLVcnQ5kbpeH7tykEAzvY=");
   _c2 = Logout;
   const Login = props => {
     _s2();
@@ -1141,22 +1134,15 @@ try {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 54,
+          lineNumber: 44,
           columnNumber: 9
         }
-      }, /*#__PURE__*/_reactDefault.default.createElement("p", {
-        __self: undefined,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 55,
-          columnNumber: 13
-        }
-      }, "lets log in"), /*#__PURE__*/_reactDefault.default.createElement("form", {
+      }, /*#__PURE__*/_reactDefault.default.createElement("form", {
         onSubmit: handleSubmit(onSubmit),
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 56,
+          lineNumber: 45,
           columnNumber: 13
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("input", _extends({
@@ -1167,7 +1153,7 @@ try {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 58,
+          lineNumber: 47,
           columnNumber: 17
         }
       })), /*#__PURE__*/_reactDefault.default.createElement("input", _extends({
@@ -1179,14 +1165,14 @@ try {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 61,
+          lineNumber: 50,
           columnNumber: 17
         }
       })), errors.exampleRequired && /*#__PURE__*/_reactDefault.default.createElement("span", {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 63,
+          lineNumber: 52,
           columnNumber: 44
         }
       }, "This field is required"), /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -1194,7 +1180,7 @@ try {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 65,
+          lineNumber: 54,
           columnNumber: 17
         }
       })))
@@ -1227,7 +1213,7 @@ try {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 89,
+          lineNumber: 78,
           columnNumber: 9
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("button", {
@@ -1235,14 +1221,14 @@ try {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 90,
+          lineNumber: 79,
           columnNumber: 13
         }
       }, "clear error"), /*#__PURE__*/_reactDefault.default.createElement("h1", {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 91,
+          lineNumber: 80,
           columnNumber: 13
         }
       }, "signing up"), /*#__PURE__*/_reactDefault.default.createElement("form", {
@@ -1250,7 +1236,7 @@ try {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 92,
+          lineNumber: 81,
           columnNumber: 13
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("input", _extends({
@@ -1261,7 +1247,7 @@ try {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 94,
+          lineNumber: 83,
           columnNumber: 17
         }
       })), /*#__PURE__*/_reactDefault.default.createElement("input", _extends({
@@ -1273,14 +1259,14 @@ try {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 97,
+          lineNumber: 86,
           columnNumber: 17
         }
       })), errors.exampleRequired && /*#__PURE__*/_reactDefault.default.createElement("span", {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 99,
+          lineNumber: 88,
           columnNumber: 44
         }
       }, "This field is required"), /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -1288,42 +1274,42 @@ try {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 101,
+          lineNumber: 90,
           columnNumber: 17
         }
       })), /*#__PURE__*/_reactDefault.default.createElement("div", {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 103,
+          lineNumber: 92,
           columnNumber: 13
         }
       }, result ? /*#__PURE__*/_reactDefault.default.createElement("div", {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 107,
+          lineNumber: 96,
           columnNumber: 29
         }
       }, "results", /*#__PURE__*/_reactDefault.default.createElement("p", {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 109,
+          lineNumber: 98,
           columnNumber: 33
         }
       }, result.data), /*#__PURE__*/_reactDefault.default.createElement("p", {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 110,
+          lineNumber: 99,
           columnNumber: 33
         }
       }, result.status)) : error ? /*#__PURE__*/_reactDefault.default.createElement("div", {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 113,
+          lineNumber: 102,
           columnNumber: 30
         }
       }, "error :", error) : ""))
@@ -1339,14 +1325,14 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 126,
+          lineNumber: 115,
           columnNumber: 9
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("h1", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 127,
+          lineNumber: 116,
           columnNumber: 13
         }
       }, "im newsfeed"))
@@ -1367,7 +1353,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 141,
+          lineNumber: 130,
           columnNumber: 9
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("input", _extends({
@@ -1376,7 +1362,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 143,
+          lineNumber: 132,
           columnNumber: 13
         }
       })), /*#__PURE__*/_reactDefault.default.createElement("input", _extends({
@@ -1387,14 +1373,14 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 146,
+          lineNumber: 135,
           columnNumber: 13
         }
       })), errors.exampleRequired && /*#__PURE__*/_reactDefault.default.createElement("span", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 148,
+          lineNumber: 137,
           columnNumber: 40
         }
       }, "This field is required"), /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -1402,7 +1388,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 150,
+          lineNumber: 139,
           columnNumber: 13
         }
       }))
@@ -1412,52 +1398,96 @@ try {
     return [_reactHookForm.useForm];
   });
   _c6 = Form;
-  function App() {
+  function Myaccount(props) {
     _s5();
-    const [loggedIn, setLoggedIn] = _react.useState(false);
-    const [currentUser, setCurrentUser] = _react.useState("");
+    const [userData, setUserData] = _react.useState([]);
+    _react.useEffect(() => {
+      _axiosDefault.default.get(`http://localhost:3000/account/${props.currentUser}`).then(res => {
+        console.log(res);
+        setUserData(Object.entries(res.data.user[0]));
+      });
+    }, []);
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("div", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 154,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("h1", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 155,
+          columnNumber: 13
+        }
+      }, "my account"), /*#__PURE__*/_reactDefault.default.createElement("ul", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 156,
+          columnNumber: 13
+        }
+      }, userData.map(ele => /*#__PURE__*/_reactDefault.default.createElement("li", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 157,
+          columnNumber: 38
+        }
+      }, ele[0], " --- ", ele[1], " ")), "            "))
+    );
+  }
+  _s5(Myaccount, "MEi9diF6EeXMji3OmOnykM+Lnog=");
+  _c7 = Myaccount;
+  function App() {
+    _s6();
+    const [loggedIn, setLoggedIn] = _react.useState(true);
+    // myTODO change bool to false and currentUser to ""
+    const [currentUser, setCurrentUser] = _react.useState("abc");
     console.log("setLoggedIn", setLoggedIn);
     return (
       /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.BrowserRouter, {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 163,
+          lineNumber: 170,
           columnNumber: 9
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("div", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 164,
+          lineNumber: 171,
           columnNumber: 13
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("p", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 165,
+          lineNumber: 172,
           columnNumber: 17
         }
       }, currentUser), /*#__PURE__*/_reactDefault.default.createElement("nav", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 166,
+          lineNumber: 173,
           columnNumber: 17
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("ul", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 167,
+          lineNumber: 174,
           columnNumber: 21
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("li", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 168,
+          lineNumber: 175,
           columnNumber: 25
         }
       }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
@@ -1465,14 +1495,14 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 169,
+          lineNumber: 176,
           columnNumber: 29
         }
       }, "Home")), /*#__PURE__*/_reactDefault.default.createElement("li", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 171,
+          lineNumber: 178,
           columnNumber: 25
         }
       }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
@@ -1480,14 +1510,14 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 172,
+          lineNumber: 179,
           columnNumber: 29
         }
       }, "Signup")), /*#__PURE__*/_reactDefault.default.createElement("li", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 174,
+          lineNumber: 181,
           columnNumber: 25
         }
       }, loggedIn ? /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
@@ -1495,7 +1525,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 175,
+          lineNumber: 182,
           columnNumber: 41
         }
       }, "Log Out") : /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
@@ -1503,14 +1533,29 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 175,
+          lineNumber: 182,
           columnNumber: 77
         }
-      }, "Log In")))), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Switch, {
+      }, "Log In")), loggedIn ? /*#__PURE__*/_reactDefault.default.createElement("li", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 179,
+          lineNumber: 185,
+          columnNumber: 25
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
+        to: "/myaccount",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 186,
+          columnNumber: 29
+        }
+      }, " My account ")) : "")), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Switch, {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 190,
           columnNumber: 17
         }
       }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
@@ -1518,14 +1563,14 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 180,
+          lineNumber: 191,
           columnNumber: 21
         }
       }, /*#__PURE__*/_reactDefault.default.createElement(Signup, {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 181,
+          lineNumber: 192,
           columnNumber: 25
         }
       })), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
@@ -1533,7 +1578,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 183,
+          lineNumber: 194,
           columnNumber: 21
         }
       }, /*#__PURE__*/_reactDefault.default.createElement(Login, {
@@ -1542,7 +1587,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 184,
+          lineNumber: 195,
           columnNumber: 25
         }
       })), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
@@ -1550,7 +1595,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 186,
+          lineNumber: 197,
           columnNumber: 21
         }
       }, /*#__PURE__*/_reactDefault.default.createElement(Logout, {
@@ -1560,7 +1605,23 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 187,
+          lineNumber: 198,
+          columnNumber: 25
+        }
+      })), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
+        path: "/myaccount",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 200,
+          columnNumber: 21
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement(Myaccount, {
+        currentUser: currentUser,
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 201,
           columnNumber: 25
         }
       })), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
@@ -1568,37 +1629,38 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 189,
+          lineNumber: 204,
           columnNumber: 21
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("h1", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 190,
+          lineNumber: 205,
           columnNumber: 25
         }
       }, "we home")))))
     );
   }
-  _s5(App, "TPaw5tFX0xK0581Ib1p+tihWB6g=");
-  _c7 = App;
+  _s6(App, "AzhxKiZmAGZ8eBaT9N8wbcBp0Wo=");
+  _c8 = App;
   _reactDomDefault.default.render(/*#__PURE__*/_reactDefault.default.createElement(App, {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 200,
+      lineNumber: 215,
       columnNumber: 5
     }
   }), document.getElementById('root'));
-  var _c, _c2, _c3, _c4, _c5, _c6, _c7;
+  var _c, _c2, _c3, _c4, _c5, _c6, _c7, _c8;
   $RefreshReg$(_c, "Welcome");
   $RefreshReg$(_c2, "Logout");
   $RefreshReg$(_c3, "Login");
   $RefreshReg$(_c4, "Signup");
   $RefreshReg$(_c5, "NewsFeed");
   $RefreshReg$(_c6, "Form");
-  $RefreshReg$(_c7, "App");
+  $RefreshReg$(_c7, "Myaccount");
+  $RefreshReg$(_c8, "App");
   helpers.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;

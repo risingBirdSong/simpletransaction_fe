@@ -1,0 +1,12 @@
+11
+68/home/peterm/codingHome/haskell/simplebank/fe/dist/index.8d3dd0da.js1626574549275014074 0
+72/home/peterm/codingHome/haskell/simplebank/fe/dist/index.8d3dd0da.js.map1626574549279014063 0
+50/home/peterm/codingHome/haskell/simplebank/fe/dist1626574549279014063 1
+58/home/peterm/codingHome/haskell/simplebank/fe/package.json1626461452253317728 0
+55/home/peterm/codingHome/haskell/simplebank/fe/index.tsx1626574549007014838 0
+53/home/peterm/codingHome/haskell/simplebank/fe/test.md1626543696243549782 0
+61/home/peterm/codingHome/haskell/simplebank/fe/dist/index.html1626574549275014074 0
+56/home/peterm/codingHome/haskell/simplebank/fe/index.html1626407767477829809 0
+63/home/peterm/codingHome/haskell/simplebank/fe/package-lock.json1626461452249317700 0
+56/home/peterm/codingHome/haskell/simplebank/fe/.gitignore1626569526376449948 0
+45/home/peterm/codingHome/haskell/simplebank/fe1626569501614753446 1

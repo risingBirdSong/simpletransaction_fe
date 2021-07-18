@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 import ReactDOM from 'react-dom';
 import {
     BrowserRouter as Router,
@@ -9,7 +9,7 @@ import {
 } from "react-router-dom";
 import { useState, useEffect } from 'react';
 import { useForm } from "react-hook-form";
-import axios from "axios"
+import axios from "axios";
 
 
 
@@ -17,24 +17,14 @@ function Welcome(props) {
     return <h1>Hello, {props.name}</h1>;
 }
 
-// function Home() {
-//     const [loggedInName, setLoggedInName] = useState("");
-
-
-//     return (
-//         <div>
-//             <h1>im home :)</h1>
-
-//         </div>
-//     )
-// }
-
 const Logout = props => {
+   const [loggingOut, setLoggingOut] = useState(false) 
     useEffect(() => {
         axios.post("http://localhost:3000/logout", {"name" : props.currentUser} ).then((res) => {props.stlg(res.data.loggedstatus); props.setCurrentUser(""); setLoggingOut(true)})
     }, [])
     return (
         <div>
+            {/* this is bad , how can be improved? i want access to the underlying function so I can use it in a setTimeout inside of the above .then , not in a Component */}
             <Redirect to="/" />
         </div>
     )
@@ -52,7 +42,6 @@ const Login = props => {
 
     return (
         <div>
-            <p>lets log in</p>
             <form onSubmit={handleSubmit(onSubmit)}>
                 {/* register your input into the hook by invoking the "register" function */}
                 <input defaultValue="enter your name" {...register("name", { required: true })} />
@@ -152,11 +141,29 @@ function Form() {
     );
 }
 
+function Myaccount (props) {
+    const [userData, setUserData] = useState([]) 
+    useEffect(() => {
+        axios.get(`http://localhost:3000/account/${props.currentUser}`).then(res => {
+        console.log(res);
+        setUserData(Object.entries(res.data.user[0]))
+        })
+    } , [])
+
+    return (
+        <div>
+            <h1>my account</h1>
+            <ul>
+{                userData.map(ele => <li>{ele[0]} --- {ele[1]} </li> )
+}            </ul>
+        </div>
+    )
+}
 
 function App() {
 
-    const [loggedIn, setLoggedIn] = useState<Boolean>(false)
-    const [currentUser, setCurrentUser] = useState("");
+    const [loggedIn, setLoggedIn] = useState<Boolean>(true) // myTODO change bool to false and currentUser to ""
+    const [currentUser, setCurrentUser] = useState("abc");
     console.log("setLoggedIn", setLoggedIn);
 
     return (
@@ -174,6 +181,10 @@ function App() {
                         <li>
                             {loggedIn ? <Link to="/logout">Log Out</Link> : <Link to="/login">Log In</Link>}
                         </li>
+                     {  loggedIn ? 
+                       (<li>
+                            <Link to="/myaccount"> My account </Link>
+                        </li>) : ""}
                     </ul>
                 </nav>
                 <Switch>
@@ -186,6 +197,10 @@ function App() {
                     <Route path="/logout">
                         <Logout stlg={setLoggedIn} currentUser={currentUser} setCurrentUser={setCurrentUser} />
                     </Route>
+                    <Route path="/myaccount">
+                        <Myaccount currentUser={currentUser}/>
+                    </Route>
+                    {/* note, leave / at bottom, itll hit on all cases */}
                     <Route path="/">
                         <h1>we home</h1>
                     </Route>
