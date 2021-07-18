@@ -1,0 +1,395 @@
+var helpers = require("../../../../../../usr/local/lib/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+try {
+  var _react = require("react");
+  var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _reactDom = require('react-dom');
+  var _reactDomDefault = _parcelHelpers.interopDefault(_reactDom);
+  var _reactRouterDom = require("react-router-dom");
+  var _reactDefault = _parcelHelpers.interopDefault(_react);
+  var _reactHookForm = require("react-hook-form");
+  var _axios = require("axios");
+  var _axiosDefault = _parcelHelpers.interopDefault(_axios);
+  var _jsxFileName = "/home/peterm/codingHome/haskell/simplebank/fe/index.tsx", _s = $RefreshSig$(), _s2 = $RefreshSig$(), _s3 = $RefreshSig$();
+  function _extends() {
+    _extends = Object.assign || (function (target) {
+      for (var i = 1; i < arguments.length; i++) {
+        var source = arguments[i];
+        for (var key in source) {
+          if (Object.prototype.hasOwnProperty.call(source, key)) {
+            target[key] = source[key];
+          }
+        }
+      }
+      return target;
+    });
+    return _extends.apply(this, arguments);
+  }
+  function Welcome(props) {
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("h1", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 16,
+          columnNumber: 12
+        }
+      }, "Hello, ", props.name)
+    );
+  }
+  _c = Welcome;
+  // function Home() {
+  // const [loggedInName, setLoggedInName] = useState("");
+  // return (
+  // <div>
+  // <h1>im home :)</h1>
+  // </div>
+  // )
+  // }
+  const Login = () => {
+    _s();
+    const [loginName, setLoginName] = _react.useState("");
+    const [password, setPassword] = _react.useState("");
+    const [result, setResult] = _react.useState("");
+  };
+  _s(Login, "92vDCfr+ys/cNa/pj+y4Ky01gL4=");
+  _c2 = Login;
+  const Signup = () => {
+    _s2();
+    const [result, setResult] = _react.useState("");
+    const {register, handleSubmit, watch, formState: {errors}} = _reactHookForm.useForm();
+    const [error, setError] = _react.useState("");
+    const onSubmit = data => _axiosDefault.default.post("http://localhost:3000/simpleaccount", data).then(res => {
+      setResult(res);
+      console.log(res);
+    }).catch(err => console.log(err));
+    // const onSubmit = data => console.log(data.loginName)
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("div", {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 47,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("h1", {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 49,
+          columnNumber: 13
+        }
+      }, "signing up"), /*#__PURE__*/_reactDefault.default.createElement("form", {
+        onSubmit: handleSubmit(onSubmit),
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 50,
+          columnNumber: 13
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("input", _extends({
+        defaultValue: "your login name"
+      }, register("name", {
+        required: true
+      }), {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 52,
+          columnNumber: 17
+        }
+      })), /*#__PURE__*/_reactDefault.default.createElement("input", _extends({
+        type: "password",
+        defaultValue: "your password"
+      }, register("password", {
+        required: true
+      }), {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 55,
+          columnNumber: 17
+        }
+      })), errors.exampleRequired && /*#__PURE__*/_reactDefault.default.createElement("span", {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 57,
+          columnNumber: 44
+        }
+      }, "This field is required"), /*#__PURE__*/_reactDefault.default.createElement("input", {
+        type: "submit",
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 59,
+          columnNumber: 17
+        }
+      })), /*#__PURE__*/_reactDefault.default.createElement("div", {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 61,
+          columnNumber: 13
+        }
+      }, result ? /*#__PURE__*/_reactDefault.default.createElement("div", {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 65,
+          columnNumber: 29
+        }
+      }, "results", /*#__PURE__*/_reactDefault.default.createElement("p", {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 67,
+          columnNumber: 33
+        }
+      }, result.data), /*#__PURE__*/_reactDefault.default.createElement("p", {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 68,
+          columnNumber: 33
+        }
+      }, result.status)) : error ? /*#__PURE__*/_reactDefault.default.createElement("div", {
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 71,
+          columnNumber: 27
+        }
+      }, "error :", error) : ""))
+    );
+  };
+  _s2(Signup, "+KqYQCIngYJ1/vxCTXeQYCt27Os=", false, function () {
+    return [_reactHookForm.useForm];
+  });
+  _c3 = Signup;
+  function NewsFeed() {
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement("div", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 84,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("h1", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 85,
+          columnNumber: 13
+        }
+      }, "im newsfeed"))
+    );
+  }
+  _c4 = NewsFeed;
+  function Form() {
+    _s3();
+    const {register, handleSubmit, watch, formState: {errors}} = _reactHookForm.useForm();
+    const onSubmit = data => console.log(data);
+    console.log(watch("example"));
+    // watch input value by passing the name of it
+    return (
+      /*#__PURE__*/
+      /*"handleSubmit" will validate your inputs before invoking "onSubmit"*/
+      _reactDefault.default.createElement("form", {
+        onSubmit: handleSubmit(onSubmit),
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 99,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("input", _extends({
+        defaultValue: "test"
+      }, register("example"), {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 101,
+          columnNumber: 13
+        }
+      })), /*#__PURE__*/_reactDefault.default.createElement("input", _extends({
+        defaultValue: "hi there"
+      }, register("exampleRequired", {
+        required: true
+      }), {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 104,
+          columnNumber: 13
+        }
+      })), errors.exampleRequired && /*#__PURE__*/_reactDefault.default.createElement("span", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 106,
+          columnNumber: 40
+        }
+      }, "This field is required"), /*#__PURE__*/_reactDefault.default.createElement("input", {
+        type: "submit",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 108,
+          columnNumber: 13
+        }
+      }))
+    );
+  }
+  _s3(Form, "77WzwRY2adCYNFA0cLnNubMUW6o=", false, function () {
+    return [_reactHookForm.useForm];
+  });
+  _c5 = Form;
+  function App() {
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.BrowserRouter, {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 115,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 116,
+          columnNumber: 13
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("nav", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 117,
+          columnNumber: 17
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("ul", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 118,
+          columnNumber: 21
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("li", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 119,
+          columnNumber: 25
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
+        to: "/",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 120,
+          columnNumber: 29
+        }
+      }, "Home")), /*#__PURE__*/_reactDefault.default.createElement("li", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 122,
+          columnNumber: 25
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
+        to: "/signup",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 123,
+          columnNumber: 29
+        }
+      }, "Signup")), /*#__PURE__*/_reactDefault.default.createElement("li", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 125,
+          columnNumber: 25
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
+        to: "/users",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 126,
+          columnNumber: 29
+        }
+      }, "Users")))), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Switch, {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 130,
+          columnNumber: 17
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
+        path: "/signup",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 131,
+          columnNumber: 21
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement(Signup, {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 132,
+          columnNumber: 25
+        }
+      })), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
+        path: "/users",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 134,
+          columnNumber: 21
+        }
+      }), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
+        path: "/",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 136,
+          columnNumber: 21
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("h1", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 137,
+          columnNumber: 25
+        }
+      }, "we home")))))
+    );
+  }
+  _c6 = App;
+  _reactDomDefault.default.render(/*#__PURE__*/_reactDefault.default.createElement(App, {
+    __self: undefined,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 147,
+      columnNumber: 5
+    }
+  }), document.getElementById('root'));
+  var _c, _c2, _c3, _c4, _c5, _c6;
+  $RefreshReg$(_c, "Welcome");
+  $RefreshReg$(_c2, "Login");
+  $RefreshReg$(_c3, "Signup");
+  $RefreshReg$(_c4, "NewsFeed");
+  $RefreshReg$(_c5, "Form");
+  $RefreshReg$(_c6, "App");
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
