@@ -1057,7 +1057,8 @@ try {
   var _reactHookForm = require("react-hook-form");
   var _axios = require("axios");
   var _axiosDefault = _parcelHelpers.interopDefault(_axios);
-  var _jsxFileName = "/home/peterm/codingHome/haskell/simplebank/fe/index.tsx", _s = $RefreshSig$(), _s2 = $RefreshSig$(), _s3 = $RefreshSig$(), _s4 = $RefreshSig$(), _s5 = $RefreshSig$(), _s6 = $RefreshSig$();
+  var _reactRouterHashLink = require('react-router-hash-link');
+  var _jsxFileName = "/home/peterm/codingHome/haskell/simplebank/fe/index.tsx", _s = $RefreshSig$(), _s2 = $RefreshSig$(), _s3 = $RefreshSig$(), _s4 = $RefreshSig$(), _s5 = $RefreshSig$(), _s6 = $RefreshSig$(), _s7 = $RefreshSig$(), _s8 = $RefreshSig$();
   function _extends() {
     _extends = Object.assign || (function (target) {
       for (var i = 1; i < arguments.length; i++) {
@@ -1078,7 +1079,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 17,
+          lineNumber: 19,
           columnNumber: 12
         }
       }, "Hello, ", props.name)
@@ -1102,7 +1103,7 @@ try {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 26,
+          lineNumber: 28,
           columnNumber: 9
         }
       }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Redirect, {
@@ -1110,7 +1111,7 @@ try {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28,
+          lineNumber: 30,
           columnNumber: 13
         }
       }))
@@ -1134,7 +1135,7 @@ try {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44,
+          lineNumber: 46,
           columnNumber: 9
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("form", {
@@ -1142,7 +1143,7 @@ try {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 45,
+          lineNumber: 47,
           columnNumber: 13
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("input", _extends({
@@ -1153,7 +1154,7 @@ try {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47,
+          lineNumber: 49,
           columnNumber: 17
         }
       })), /*#__PURE__*/_reactDefault.default.createElement("input", _extends({
@@ -1165,14 +1166,14 @@ try {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 50,
+          lineNumber: 52,
           columnNumber: 17
         }
       })), errors.exampleRequired && /*#__PURE__*/_reactDefault.default.createElement("span", {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 52,
+          lineNumber: 54,
           columnNumber: 44
         }
       }, "This field is required"), /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -1180,7 +1181,7 @@ try {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 54,
+          lineNumber: 56,
           columnNumber: 17
         }
       })))
@@ -1213,7 +1214,7 @@ try {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 78,
+          lineNumber: 80,
           columnNumber: 9
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("button", {
@@ -1221,14 +1222,14 @@ try {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 79,
+          lineNumber: 81,
           columnNumber: 13
         }
       }, "clear error"), /*#__PURE__*/_reactDefault.default.createElement("h1", {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 80,
+          lineNumber: 82,
           columnNumber: 13
         }
       }, "signing up"), /*#__PURE__*/_reactDefault.default.createElement("form", {
@@ -1236,7 +1237,7 @@ try {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 81,
+          lineNumber: 83,
           columnNumber: 13
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("input", _extends({
@@ -1247,7 +1248,7 @@ try {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 83,
+          lineNumber: 85,
           columnNumber: 17
         }
       })), /*#__PURE__*/_reactDefault.default.createElement("input", _extends({
@@ -1259,14 +1260,14 @@ try {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 86,
+          lineNumber: 88,
           columnNumber: 17
         }
       })), errors.exampleRequired && /*#__PURE__*/_reactDefault.default.createElement("span", {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 88,
+          lineNumber: 90,
           columnNumber: 44
         }
       }, "This field is required"), /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -1274,42 +1275,42 @@ try {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 90,
+          lineNumber: 92,
           columnNumber: 17
         }
       })), /*#__PURE__*/_reactDefault.default.createElement("div", {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 92,
+          lineNumber: 94,
           columnNumber: 13
         }
       }, result ? /*#__PURE__*/_reactDefault.default.createElement("div", {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 96,
+          lineNumber: 98,
           columnNumber: 29
         }
       }, "results", /*#__PURE__*/_reactDefault.default.createElement("p", {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 98,
+          lineNumber: 100,
           columnNumber: 33
         }
       }, result.data), /*#__PURE__*/_reactDefault.default.createElement("p", {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 99,
+          lineNumber: 101,
           columnNumber: 33
         }
       }, result.status)) : error ? /*#__PURE__*/_reactDefault.default.createElement("div", {
         __self: undefined,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 102,
+          lineNumber: 104,
           columnNumber: 30
         }
       }, "error :", error) : ""))
@@ -1325,14 +1326,14 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 115,
+          lineNumber: 117,
           columnNumber: 9
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("h1", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 116,
+          lineNumber: 118,
           columnNumber: 13
         }
       }, "im newsfeed"))
@@ -1353,7 +1354,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 130,
+          lineNumber: 132,
           columnNumber: 9
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("input", _extends({
@@ -1362,7 +1363,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 132,
+          lineNumber: 134,
           columnNumber: 13
         }
       })), /*#__PURE__*/_reactDefault.default.createElement("input", _extends({
@@ -1373,14 +1374,14 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 135,
+          lineNumber: 137,
           columnNumber: 13
         }
       })), errors.exampleRequired && /*#__PURE__*/_reactDefault.default.createElement("span", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 137,
+          lineNumber: 139,
           columnNumber: 40
         }
       }, "This field is required"), /*#__PURE__*/_reactDefault.default.createElement("input", {
@@ -1388,7 +1389,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 139,
+          lineNumber: 141,
           columnNumber: 13
         }
       }))
@@ -1404,7 +1405,7 @@ try {
     _react.useEffect(() => {
       _axiosDefault.default.get(`http://localhost:3000/account/${props.currentUser}`).then(res => {
         console.log(res);
-        setUserData(Object.entries(res.data.user[0]));
+        setUserData(Object.entries(res.data));
       });
     }, []);
     return (
@@ -1412,82 +1413,284 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 154,
+          lineNumber: 156,
           columnNumber: 9
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("h1", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 155,
+          lineNumber: 157,
           columnNumber: 13
         }
       }, "my account"), /*#__PURE__*/_reactDefault.default.createElement("ul", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 156,
+          lineNumber: 158,
           columnNumber: 13
         }
       }, userData.map(ele => /*#__PURE__*/_reactDefault.default.createElement("li", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 157,
+          lineNumber: 159,
           columnNumber: 38
         }
-      }, ele[0], " --- ", ele[1], " ")), "            "))
+      }, ele[0], " --- ", ele[1], " "))))
     );
   }
   _s5(Myaccount, "MEi9diF6EeXMji3OmOnykM+Lnog=");
   _c7 = Myaccount;
-  function App() {
+  function Transaction(props) {
     _s6();
-    const [loggedIn, setLoggedIn] = _react.useState(true);
-    // myTODO change bool to false and currentUser to ""
-    const [currentUser, setCurrentUser] = _react.useState("abc");
-    console.log("setLoggedIn", setLoggedIn);
+    const [otherAccounts, setOtherAccounts] = _react.useState([]);
+    _react.useEffect(() => {
+      _axiosDefault.default.get(`http://localhost:3000/transactionget/${props.currentUser}`).then(res => {
+        console.log(res);
+        setOtherAccounts(res.data.accounts);
+      });
+    }, []);
     return (
-      /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.BrowserRouter, {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 170,
-          columnNumber: 9
-        }
-      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 171,
-          columnNumber: 13
-        }
-      }, /*#__PURE__*/_reactDefault.default.createElement("p", {
-        __self: this,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 172,
-          columnNumber: 17
-        }
-      }, currentUser), /*#__PURE__*/_reactDefault.default.createElement("nav", {
+      /*#__PURE__*/_reactDefault.default.createElement("div", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
           lineNumber: 173,
+          columnNumber: 13
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("h1", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 174,
+          columnNumber: 9
+        }
+      }, "transaction"), /*#__PURE__*/_reactDefault.default.createElement("ul", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 175,
+          columnNumber: 9
+        }
+      }, otherAccounts.map(account => /*#__PURE__*/_reactDefault.default.createElement("li", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 177,
           columnNumber: 17
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("ul", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 174,
+          lineNumber: 178,
+          columnNumber: 21
+        }
+      }, Object.entries(account).map(([a, b]) => /*#__PURE__*/_reactDefault.default.createElement("li", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 179,
+          columnNumber: 66
+        }
+      }, " ", /*#__PURE__*/_reactDefault.default.createElement(_reactRouterHashLink.HashLink, {
+        to: `/preparetransaction/${props.currentUser}/${b}`,
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 179,
+          columnNumber: 71
+        }
+      }, " ", b, " "), " ")), /*#__PURE__*/_reactDefault.default.createElement("hr", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 180,
+          columnNumber: 25
+        }
+      }))))))
+    );
+  }
+  _s6(Transaction, "u3vpl4LDwpQULrfZdC2VIMEafHU=");
+  _c8 = Transaction;
+  const PrepareTransaction = props => {
+    _s7();
+    const {register, handleSubmit, watch, formState: {errors}} = _reactHookForm.useForm();
+    const [results, setResults] = _react.useState("");
+    console.log("props", props);
+    // console.log(match);
+    // setResults(res.data)
+    const onSubmit = data => _axiosDefault.default.post("http://localhost:3000/transaction", {
+      ...data,
+      "amount": Number(data.amount)
+    }).then(res => setResults(res.data));
+    // const onSubmit = data => console.log({...data, "amount" : Number(data.amount)});
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
+        path: "/preparetransaction/:from/:to",
+        render: ({match}) => {
+          return (
+            /*#__PURE__*/_reactDefault.default.createElement("div", {
+              __self: undefined,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 202,
+                columnNumber: 24
+              }
+            }, /*#__PURE__*/_reactDefault.default.createElement("h3", {
+              __self: undefined,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 203,
+                columnNumber: 21
+              }
+            }, "preparing transaction"), /*#__PURE__*/_reactDefault.default.createElement("p", {
+              __self: undefined,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 204,
+                columnNumber: 21
+              }
+            }, " from : ", match.params.from, " --- to : ", match.params.to, " "), /*#__PURE__*/_reactDefault.default.createElement("form", {
+              onSubmit: handleSubmit(onSubmit),
+              __self: undefined,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 205,
+                columnNumber: 21
+              }
+            }, /*#__PURE__*/_reactDefault.default.createElement("input", _extends({
+              defaultValue: "0.00"
+            }, register("amount", {
+              required: true
+            }), {
+              __self: undefined,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 207,
+                columnNumber: 25
+              }
+            })), /*#__PURE__*/_reactDefault.default.createElement("input", _extends({
+              type: "hidden",
+              defaultValue: match.params.from
+            }, register("from", {
+              required: true
+            }), {
+              __self: undefined,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 208,
+                columnNumber: 25
+              }
+            })), /*#__PURE__*/_reactDefault.default.createElement("input", _extends({
+              type: "hidden",
+              defaultValue: match.params.to
+            }, register("to", {
+              required: true
+            }), {
+              __self: undefined,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 209,
+                columnNumber: 25
+              }
+            })), /*#__PURE__*/_reactDefault.default.createElement("input", _extends({
+              defaultValue: "payment note"
+            }, register("note", {
+              required: true
+            }), {
+              __self: undefined,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 212,
+                columnNumber: 25
+              }
+            })), errors.exampleRequired && /*#__PURE__*/_reactDefault.default.createElement("span", {
+              __self: undefined,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 214,
+                columnNumber: 52
+              }
+            }, "This field is required"), /*#__PURE__*/_reactDefault.default.createElement("input", {
+              type: "submit",
+              __self: undefined,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 216,
+                columnNumber: 25
+              }
+            })), /*#__PURE__*/_reactDefault.default.createElement("p", {
+              __self: undefined,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 218,
+                columnNumber: 21
+              }
+            }, results))
+          );
+        },
+        __self: undefined,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 199,
+          columnNumber: 9
+        }
+      })
+    );
+  };
+  _s7(PrepareTransaction, "lZ1X5SwgDArGENmazh+69qLfrwc=", false, function () {
+    return [_reactHookForm.useForm];
+  });
+  _c9 = PrepareTransaction;
+  function App() {
+    _s8();
+    const [loggedIn, setLoggedIn] = _react.useState(false);
+    // myTODO change bool to false and currentUser to "" , just using these for now to get around auth
+    const [currentUser, setCurrentUser] = _react.useState("");
+    console.log("setLoggedIn", setLoggedIn);
+    return (
+      /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.BrowserRouter, {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 232,
+          columnNumber: 9
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("div", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 233,
+          columnNumber: 13
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("p", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 234,
+          columnNumber: 17
+        }
+      }, currentUser), /*#__PURE__*/_reactDefault.default.createElement("nav", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 235,
+          columnNumber: 17
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement("ul", {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 236,
           columnNumber: 21
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("li", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 175,
+          lineNumber: 237,
           columnNumber: 25
         }
       }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
@@ -1495,14 +1698,14 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 176,
+          lineNumber: 238,
           columnNumber: 29
         }
       }, "Home")), /*#__PURE__*/_reactDefault.default.createElement("li", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 178,
+          lineNumber: 240,
           columnNumber: 25
         }
       }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
@@ -1510,14 +1713,14 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 179,
+          lineNumber: 241,
           columnNumber: 29
         }
       }, "Signup")), /*#__PURE__*/_reactDefault.default.createElement("li", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 181,
+          lineNumber: 243,
           columnNumber: 25
         }
       }, loggedIn ? /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
@@ -1525,7 +1728,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 182,
+          lineNumber: 244,
           columnNumber: 41
         }
       }, "Log Out") : /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
@@ -1533,29 +1736,44 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 182,
+          lineNumber: 244,
           columnNumber: 77
         }
-      }, "Log In")), loggedIn ? /*#__PURE__*/_reactDefault.default.createElement("li", {
+      }, "Log In")), loggedIn ? /*#__PURE__*/_reactDefault.default.createElement(_reactDefault.default.Fragment, null, /*#__PURE__*/_reactDefault.default.createElement("li", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 185,
-          columnNumber: 25
+          lineNumber: 249,
+          columnNumber: 37
         }
       }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
         to: "/myaccount",
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 186,
-          columnNumber: 29
+          lineNumber: 250,
+          columnNumber: 41
         }
-      }, " My account ")) : "")), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Switch, {
+      }, " My account ")), /*#__PURE__*/_reactDefault.default.createElement("li", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 190,
+          lineNumber: 252,
+          columnNumber: 37
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Link, {
+        to: "/transaction",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 253,
+          columnNumber: 41
+        }
+      }, "Transaction"))) : "")), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Switch, {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 261,
           columnNumber: 17
         }
       }, /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
@@ -1563,14 +1781,14 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 191,
+          lineNumber: 262,
           columnNumber: 21
         }
       }, /*#__PURE__*/_reactDefault.default.createElement(Signup, {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 192,
+          lineNumber: 263,
           columnNumber: 25
         }
       })), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
@@ -1578,7 +1796,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 194,
+          lineNumber: 265,
           columnNumber: 21
         }
       }, /*#__PURE__*/_reactDefault.default.createElement(Login, {
@@ -1587,7 +1805,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 195,
+          lineNumber: 266,
           columnNumber: 25
         }
       })), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
@@ -1595,7 +1813,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 197,
+          lineNumber: 268,
           columnNumber: 21
         }
       }, /*#__PURE__*/_reactDefault.default.createElement(Logout, {
@@ -1605,7 +1823,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 198,
+          lineNumber: 269,
           columnNumber: 25
         }
       })), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
@@ -1613,7 +1831,7 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 200,
+          lineNumber: 271,
           columnNumber: 21
         }
       }, /*#__PURE__*/_reactDefault.default.createElement(Myaccount, {
@@ -1621,7 +1839,38 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 201,
+          lineNumber: 272,
+          columnNumber: 25
+        }
+      })), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
+        path: "/transaction",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 274,
+          columnNumber: 21
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement(Transaction, {
+        currentUser: currentUser,
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 275,
+          columnNumber: 25
+        }
+      })), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
+        path: "/preparetransaction/:from/:to",
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 278,
+          columnNumber: 21
+        }
+      }, /*#__PURE__*/_reactDefault.default.createElement(PrepareTransaction, {
+        __self: this,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 279,
           columnNumber: 25
         }
       })), /*#__PURE__*/_reactDefault.default.createElement(_reactRouterDom.Route, {
@@ -1629,30 +1878,30 @@ try {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 204,
+          lineNumber: 283,
           columnNumber: 21
         }
       }, /*#__PURE__*/_reactDefault.default.createElement("h1", {
         __self: this,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 205,
+          lineNumber: 284,
           columnNumber: 25
         }
       }, "we home")))))
     );
   }
-  _s6(App, "AzhxKiZmAGZ8eBaT9N8wbcBp0Wo=");
-  _c8 = App;
+  _s8(App, "TPaw5tFX0xK0581Ib1p+tihWB6g=");
+  _c10 = App;
   _reactDomDefault.default.render(/*#__PURE__*/_reactDefault.default.createElement(App, {
     __self: undefined,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 215,
+      lineNumber: 294,
       columnNumber: 5
     }
   }), document.getElementById('root'));
-  var _c, _c2, _c3, _c4, _c5, _c6, _c7, _c8;
+  var _c, _c2, _c3, _c4, _c5, _c6, _c7, _c8, _c9, _c10;
   $RefreshReg$(_c, "Welcome");
   $RefreshReg$(_c2, "Logout");
   $RefreshReg$(_c3, "Login");
@@ -1660,14 +1909,16 @@ try {
   $RefreshReg$(_c5, "NewsFeed");
   $RefreshReg$(_c6, "Form");
   $RefreshReg$(_c7, "Myaccount");
-  $RefreshReg$(_c8, "App");
+  $RefreshReg$(_c8, "Transaction");
+  $RefreshReg$(_c9, "PrepareTransaction");
+  $RefreshReg$(_c10, "App");
   helpers.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
 
-},{"react":"3b2NM","react-dom":"2sg1U","react-router-dom":"1PMSK","react-hook-form":"5y3u9","axios":"7rA65","@parcel/transformer-js/lib/esmodule-helpers.js":"1Ikc8","../../../../../../usr/local/lib/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"1DGwK"}],"3b2NM":[function(require,module,exports) {
+},{"react":"3b2NM","react-dom":"2sg1U","react-router-dom":"1PMSK","react-hook-form":"5y3u9","axios":"7rA65","@parcel/transformer-js/lib/esmodule-helpers.js":"1Ikc8","../../../../../../usr/local/lib/node_modules/parcel/node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"1DGwK","react-router-hash-link":"3g3qJ"}],"3b2NM":[function(require,module,exports) {
 "use strict";
 if ("development" === 'production') {
   module.exports = require('./cjs/react.production.min.js');
@@ -32743,6 +32994,198 @@ function registerExportsForReactRefresh(module) {
   }
 }
 
-},{"react-refresh/runtime":"5WaVB"}]},["1j6wU","5LENX","51XVa"], "51XVa", "parcelRequire1387")
+},{"react-refresh/runtime":"5WaVB"}],"3g3qJ":[function(require,module,exports) {
+"use strict";
+if ("development" === 'production') {
+  module.exports = require('./react-router-hash-link.cjs.production.js');
+} else {
+  module.exports = require('./react-router-hash-link.cjs.development.js');
+}
+
+},{"./react-router-hash-link.cjs.development.js":"38Qpq"}],"38Qpq":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
+var React = require('react');
+var PropTypes = require('prop-types');
+var reactRouterDom = require('react-router-dom');
+function _interopDefaultLegacy(e) {
+  return e && typeof e === 'object' && ('default' in e) ? e : {
+    'default': e
+  };
+}
+var React__default = /*#__PURE__*/_interopDefaultLegacy(React);
+var PropTypes__default = /*#__PURE__*/_interopDefaultLegacy(PropTypes);
+/*! *****************************************************************************
+Copyright (c) Microsoft Corporation.
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+******************************************************************************/
+var __assign = function () {
+  __assign = Object.assign || (function __assign(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+      s = arguments[i];
+      for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+    }
+    return t;
+  });
+  return __assign.apply(this, arguments);
+};
+function __rest(s, e) {
+  var t = {};
+  for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
+  if (s != null && typeof Object.getOwnPropertySymbols === "function") for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+    if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i])) t[p[i]] = s[p[i]];
+  }
+  return t;
+}
+var hashFragment = '';
+var observer = null;
+var asyncTimerId = null;
+var scrollFunction = null;
+function reset() {
+  hashFragment = '';
+  if (observer !== null) observer.disconnect();
+  if (asyncTimerId !== null) {
+    window.clearTimeout(asyncTimerId);
+    asyncTimerId = null;
+  }
+}
+function isInteractiveElement(element) {
+  var formTags = ['BUTTON', 'INPUT', 'SELECT', 'TEXTAREA'];
+  var linkTags = ['A', 'AREA'];
+  return formTags.includes(element.tagName) && !element.hasAttribute('disabled') || linkTags.includes(element.tagName) && element.hasAttribute('href');
+}
+function getElAndScroll() {
+  var element = null;
+  if (hashFragment === '#') {
+    // use document.body instead of document.documentElement because of a bug in smoothscroll-polyfill in safari
+    // see https://github.com/iamdustan/smoothscroll/issues/138
+    // while smoothscroll-polyfill is not included, it is the recommended way to implement smoothscroll
+    // in browsers that don't natively support el.scrollIntoView({ behavior: 'smooth' })
+    element = document.body;
+  } else {
+    // check for element with matching id before assume '#top' is the top of the document
+    // see https://html.spec.whatwg.org/multipage/browsing-the-web.html#target-element
+    var id = hashFragment.replace('#', '');
+    element = document.getElementById(id);
+    if (element === null && hashFragment === '#top') {
+      // see above comment for why document.body instead of document.documentElement
+      element = document.body;
+    }
+  }
+  if (element !== null) {
+    scrollFunction(element);
+    // update focus to where the page is scrolled to
+    // unfortunately this doesn't work in safari (desktop and iOS) when blur() is called
+    var originalTabIndex = element.getAttribute('tabindex');
+    if (originalTabIndex === null && !isInteractiveElement(element)) {
+      element.setAttribute('tabindex', -1);
+    }
+    element.focus({
+      preventScroll: true
+    });
+    if (originalTabIndex === null && !isInteractiveElement(element)) {
+      // for some reason calling blur() in safari resets the focus region to where it was previously,
+      // if blur() is not called it works in safari, but then are stuck with default focus styles
+      // on an element that otherwise might never had focus styles applied, so not an option
+      element.blur();
+      element.removeAttribute('tabindex');
+    }
+    reset();
+    return true;
+  }
+  return false;
+}
+function hashLinkScroll(timeout) {
+  // Push onto callback queue so it runs after the DOM is updated
+  window.setTimeout(function () {
+    if (getElAndScroll() === false) {
+      if (observer === null) {
+        observer = new MutationObserver(getElAndScroll);
+      }
+      observer.observe(document, {
+        attributes: true,
+        childList: true,
+        subtree: true
+      });
+      // if the element doesn't show up in specified timeout or 10 seconds, stop checking
+      asyncTimerId = window.setTimeout(function () {
+        reset();
+      }, timeout || 10000);
+    }
+  }, 0);
+}
+function genericHashLink(As) {
+  return React__default['default'].forwardRef(function (props, ref) {
+    var linkHash = '';
+    if (typeof props.to === 'string' && props.to.includes('#')) {
+      linkHash = "#" + props.to.split('#').slice(1).join('#');
+    } else if (typeof props.to === 'object' && typeof props.to.hash === 'string') {
+      linkHash = props.to.hash;
+    }
+    var passDownProps = {};
+    if (As === reactRouterDom.NavLink) {
+      passDownProps.isActive = function (match, location) {
+        return match && match.isExact && location.hash === linkHash;
+      };
+    }
+    function handleClick(e) {
+      reset();
+      hashFragment = props.elementId ? "#" + props.elementId : linkHash;
+      if (props.onClick) props.onClick(e);
+      if (hashFragment !== '' && // ignore non-vanilla click events, same as react-router
+      // below logic adapted from react-router: https://github.com/ReactTraining/react-router/blob/fc91700e08df8147bd2bb1be19a299cbb14dbcaa/packages/react-router-dom/modules/Link.js#L43-L48
+      !e.defaultPrevented && // onClick prevented default
+      e.button === 0 && (// ignore everything but left clicks
+      !props.target || props.target === '_self') && // let browser handle "target=_blank" etc
+      !(e.metaKey || e.altKey || e.ctrlKey || e.shiftKey)) // ignore clicks with modifier keys
+      {
+        scrollFunction = props.scroll || (function (el) {
+          return props.smooth ? el.scrollIntoView({
+            behavior: 'smooth'
+          }) : el.scrollIntoView();
+        });
+        hashLinkScroll(props.timeout);
+      }
+    }
+    var filteredProps = __rest(props, ["scroll", "smooth", "timeout", "elementId"]);
+    return React__default['default'].createElement(As, __assign({}, passDownProps, filteredProps, {
+      onClick: handleClick,
+      ref: ref
+    }), props.children);
+  });
+}
+var HashLink = genericHashLink(reactRouterDom.Link);
+var NavHashLink = genericHashLink(reactRouterDom.NavLink);
+if ("development" !== 'production') {
+  HashLink.displayName = 'HashLink';
+  NavHashLink.displayName = 'NavHashLink';
+  var propTypes = {
+    onClick: PropTypes__default['default'].func,
+    children: PropTypes__default['default'].node,
+    scroll: PropTypes__default['default'].func,
+    timeout: PropTypes__default['default'].number,
+    elementId: PropTypes__default['default'].string,
+    to: PropTypes__default['default'].oneOfType([PropTypes__default['default'].string, PropTypes__default['default'].object])
+  };
+  HashLink.propTypes = propTypes;
+  NavHashLink.propTypes = propTypes;
+}
+exports.HashLink = HashLink;
+exports.NavHashLink = NavHashLink;
+exports.genericHashLink = genericHashLink;
+
+},{"react":"3b2NM","prop-types":"4dfy5","react-router-dom":"1PMSK"}]},["1j6wU","5LENX","51XVa"], "51XVa", "parcelRequire1387")
 
 //# sourceMappingURL=index.8d3dd0da.js.map

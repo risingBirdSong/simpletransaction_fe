@@ -10,6 +10,8 @@ import {
 import { useState, useEffect } from 'react';
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import { HashLink } from 'react-router-hash-link';
+
 
 
 
@@ -18,9 +20,9 @@ function Welcome(props) {
 }
 
 const Logout = props => {
-   const [loggingOut, setLoggingOut] = useState(false) 
+    const [loggingOut, setLoggingOut] = useState(false)
     useEffect(() => {
-        axios.post("http://localhost:3000/logout", {"name" : props.currentUser} ).then((res) => {props.stlg(res.data.loggedstatus); props.setCurrentUser(""); setLoggingOut(true)})
+        axios.post("http://localhost:3000/logout", { "name": props.currentUser }).then((res) => { props.stlg(res.data.loggedstatus); props.setCurrentUser(""); setLoggingOut(true) })
     }, [])
     return (
         <div>
@@ -34,7 +36,7 @@ const Login = props => {
     const [result, setResult] = useState("");
 
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    const onSubmit = data => axios.post("http://localhost:3000/login", data).then((res) => { props.stlg(res.data.loggedstatus) ; props.setCurrentUser(res.data.currentUser) })
+    const onSubmit = data => axios.post("http://localhost:3000/login", data).then((res) => { props.stlg(res.data.loggedstatus); props.setCurrentUser(res.data.currentUser) })
 
     // console.log("stlg",stlg);
 
@@ -141,29 +143,89 @@ function Form() {
     );
 }
 
-function Myaccount (props) {
-    const [userData, setUserData] = useState([]) 
+function Myaccount(props) {
+    const [userData, setUserData] = useState([])
     useEffect(() => {
         axios.get(`http://localhost:3000/account/${props.currentUser}`).then(res => {
-        console.log(res);
-        setUserData(Object.entries(res.data.user[0]))
+            console.log(res);
+            setUserData(Object.entries(res.data))
         })
-    } , [])
+    }, [])
 
     return (
         <div>
             <h1>my account</h1>
             <ul>
-{                userData.map(ele => <li>{ele[0]} --- {ele[1]} </li> )
-}            </ul>
+                {userData.map(ele => <li>{ele[0]} --- {ele[1]} </li>)}
+            </ul>
         </div>
     )
 }
 
+function Transaction(props) {
+    const [otherAccounts, setOtherAccounts] = useState([]);
+    useEffect(() => {
+        axios.get(`http://localhost:3000/transactionget/${props.currentUser}`).then(res => {
+            console.log(res);
+            setOtherAccounts(res.data.accounts)
+        });
+    }, [])
+    return (<div>
+        <h1>transaction</h1>
+        <ul>
+            {otherAccounts.map(account =>
+                <li>
+                    <ul>
+                        {Object.entries(account).map(([a, b]) => <li> <HashLink to={`/preparetransaction/${props.currentUser}/${b}`}> {b} </HashLink> </li>)}
+                        <hr />
+                    </ul>
+                </li>
+            )}
+        </ul>
+    </div>)
+}
+
+const PrepareTransaction = (props) => {
+    const { register, handleSubmit, watch, formState: { errors } } = useForm();
+    const [results , setResults] = useState("");
+
+    console.log("props", props);
+    // console.log(match);
+    // setResults(res.data)
+    const onSubmit = data => axios.post("http://localhost:3000/transaction", {...data, "amount" : Number(data.amount)}).then(res => setResults(res.data))
+    // const onSubmit = data => console.log({...data, "amount" : Number(data.amount)});
+    
+    return (
+        <Route
+            path="/preparetransaction/:from/:to"
+            render={({ match }) => {
+                return <div>
+                    <h3>preparing transaction</h3>
+                    <p> from : {match.params.from} --- to : {match.params.to} </p>
+                    <form onSubmit={handleSubmit(onSubmit)}>
+                        {/* register your input into the hook by invoking the "register" function */}
+                        <input defaultValue="0.00" {...register("amount", { required: true })} />
+                        <input type="hidden" defaultValue={match.params.from} {...register("from", {required : true})}  />
+                        <input type="hidden" defaultValue={match.params.to} {...register("to", {required : true})}  />
+
+                        {/* include validation with required or other standard HTML validation rules */}
+                        <input defaultValue="payment note" {...register("note", { required: true })} />
+                        {/* errors will return when field validation fails  */}
+                        {errors.exampleRequired && <span>This field is required</span>}
+
+                        <input type="submit" />
+                    </form>
+                    <p>{results}</p>
+                </div>;
+            }}
+        />
+    );
+}
+
 function App() {
 
-    const [loggedIn, setLoggedIn] = useState<Boolean>(true) // myTODO change bool to false and currentUser to ""
-    const [currentUser, setCurrentUser] = useState("abc");
+    const [loggedIn, setLoggedIn] = useState<Boolean>(false) // myTODO change bool to false and currentUser to "" , just using these for now to get around auth
+    const [currentUser, setCurrentUser] = useState("");
     console.log("setLoggedIn", setLoggedIn);
 
     return (
@@ -181,10 +243,19 @@ function App() {
                         <li>
                             {loggedIn ? <Link to="/logout">Log Out</Link> : <Link to="/login">Log In</Link>}
                         </li>
-                     {  loggedIn ? 
-                       (<li>
-                            <Link to="/myaccount"> My account </Link>
-                        </li>) : ""}
+                        {loggedIn ?
+                            (
+                                <>
+                                    <li>
+                                        <Link to="/myaccount"> My account </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/transaction">Transaction</Link>
+                                    </li>
+                                </>
+
+                            ) : ""}
+
                     </ul>
                 </nav>
                 <Switch>
@@ -198,8 +269,16 @@ function App() {
                         <Logout stlg={setLoggedIn} currentUser={currentUser} setCurrentUser={setCurrentUser} />
                     </Route>
                     <Route path="/myaccount">
-                        <Myaccount currentUser={currentUser}/>
+                        <Myaccount currentUser={currentUser} />
                     </Route>
+                    <Route path="/transaction">
+                        <Transaction currentUser={currentUser} />
+                    </Route>
+
+                    <Route path="/preparetransaction/:from/:to">
+                        <PrepareTransaction />
+                    </Route>
+
                     {/* note, leave / at bottom, itll hit on all cases */}
                     <Route path="/">
                         <h1>we home</h1>
